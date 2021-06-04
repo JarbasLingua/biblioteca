@@ -1,25 +1,29 @@
-import logging
-from os import listdir
-from os.path import join, isfile, dirname, isdir
 import json
-import requests
-from biblioteca.corpora import *
-from xdg import BaseDirectory as XDG
+import logging
+import tarfile
+from os.path import isfile, dirname, isdir
 
+import requests
+
+from biblioteca.corpora import *
 
 LOG = logging.getLogger("JarbasBiblioteca")
-LOG.setLevel("INFO")
+LOG.setLevel("DEBUG")
 
 RESOURCE_DIR = join(dirname(__file__), "res")
 CORPUS_IDS = []
 CORPUS_META = {}
-for f in listdir(RESOURCE_DIR):
-    if not f.endswith(".json"):
-        continue
-    c = f.replace(".json", "")
-    CORPUS_IDS.append(c)
-    with open(join(RESOURCE_DIR, f)) as fi:
-        CORPUS_META[c] = json.load(fi)
+
+
+def _load_meta():
+    global CORPUS_META, CORPUS_IDS
+    for f in listdir(RESOURCE_DIR):
+        if not f.endswith(".json"):
+            continue
+        c = f.replace(".json", "")
+        CORPUS_IDS.append(c)
+        with open(join(RESOURCE_DIR, f)) as fi:
+            CORPUS_META[c] = json.load(fi)
 
 
 CORPUS2CLASS = {
@@ -29,10 +33,16 @@ CORPUS2CLASS = {
     "metal_lyrics": MetalLyrics
 }
 
+_load_meta()
 _BASE_URL = "https://github.com/OpenJarbas/biblioteca/releases/download"
 _VERSION = "0.0.1a1"
-CORPUS2URL = {corpus_id: _BASE_URL + f"/{_VERSION}/{corpus_id}"
+CORPUS2URL = {corpus_id: _BASE_URL + f"/{_VERSION}/{corpus_id}.tar.gz"
               for corpus_id in CORPUS_IDS}
+
+
+def untar(src, dst_folder):
+    with tarfile.open(src) as tar:
+        tar.extractall(path=dst_folder)
 
 
 def download(corpus_id, force=False):
@@ -40,8 +50,15 @@ def download(corpus_id, force=False):
         url = CORPUS2URL[corpus_id]
     else:
         raise ValueError("invalid corpus_id")
+    base_folder = join(XDG.save_data_path("JarbasBiblioteca"), corpus_id)
     path = join(XDG.save_data_path("JarbasBiblioteca"), corpus_id + ".tar.gz")
     if isfile(path) and not force:
+        if not isdir(base_folder):  # not extracted ?
+            try:
+                untar(path, base_folder)
+            except:  # corrupted download?
+                if not force:
+                    return download(corpus_id, force=True)
         LOG.info("Already downloaded " + corpus_id)
         return
     LOG.info("downloading " + corpus_id)
@@ -49,8 +66,9 @@ def download(corpus_id, force=False):
     LOG.info("this might take a while...")
     with open(path, "wb") as f:
         f.write(requests.get(url).content)
-    # TODO extract .tar.gz to folder
-    base_folder = join(XDG.save_data_path("JarbasBiblioteca"), corpus_id)
+
+    # extract .tar.gz to folder
+    untar(path, base_folder)
 
 
 def load_corpus(corpus_id):
@@ -58,7 +76,8 @@ def load_corpus(corpus_id):
         raise ValueError("unknown corpus_id")
 
     base_folder = join(XDG.save_data_path("JarbasBiblioteca"), corpus_id)
-
+    if not isdir(base_folder):
+        raise FileNotFoundError(f"run biblioteca.download('{corpus_id}')")
     # dedicated class for this corpus
     if corpus_id in CORPUS2CLASS:
         return CORPUS2CLASS[corpus_id]()
@@ -72,4 +91,3 @@ def load_corpus(corpus_id):
     elif fmt == "json":
         return JsonCorpusReader(c)
     return AbstractCorpusReader(c)
-

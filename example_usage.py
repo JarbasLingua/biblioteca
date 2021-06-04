@@ -1,7 +1,8 @@
-from biblioteca import load_corpus
+import biblioteca
 
+biblioteca.download('metal_lyrics')
 
-corpus = load_corpus("metal_lyrics")
+corpus = biblioteca.load_corpus("metal_lyrics")
 print(corpus.corpus_id)  # metal_lyrics
 print(corpus.folder)  # ~/.local/share/JarbasBiblioteca/metal_lyrics
 print(corpus.get_file_names())
