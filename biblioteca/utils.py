@@ -30,7 +30,8 @@ CORPUS2CLASS = {
     "yesnoquestions_V0.1": YesNoQuestions,
     "metal_songs": MetalSongs,
     "metal_bands": MetalBands,
-    "metal_lyrics": MetalLyrics
+    "metal_lyrics": MetalLyrics,
+    "trveKvlt": TrveKvlt
 }
 
 _load_meta()

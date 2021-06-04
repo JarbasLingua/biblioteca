@@ -1,5 +1,6 @@
 from os import listdir
 from os.path import join
+import json
 from quebra_frases import word_tokenize, sentence_tokenize, paragraph_tokenize
 from xdg import BaseDirectory as XDG
 
@@ -66,7 +67,43 @@ class TextCorpusReader(AbstractCorpusReader):
 
 
 class JsonCorpusReader(AbstractCorpusReader):
-    """ TODO """
+    def load(self):
+        for f in self.get_file_names():
+            if not f.endswith(".json"):
+                continue
+            with open(join(self.folder, f), errors='surrogateescape') as fi:
+                self.corpora[f] = json.load(fi)
+
+    def entries(self, key=None):
+        if key:
+            yield key, self.corpora[key]
+        else:
+            for k in self.corpora:
+                yield k, self.corpora[k]
+
+    def keys(self):
+        return list(self.corpora.keys())
+
+
+class JsonDbCorpusReader(JsonCorpusReader):
+    """ json_database https://github.com/HelloChatterbox/json_database """
+    def load(self):
+        for f in self.get_file_names():
+            if not f.endswith(".jsondb"):
+                continue
+            with open(join(self.folder, f), errors='surrogateescape') as fi:
+                for db_name, json_data in json.load(fi).items():
+                    self.corpora[db_name] = json_data
+
+    def entries(self, db_name=None):
+        for db, entries in self.corpora.items():
+            if db_name and db != db_name:
+                continue
+            for e in entries:
+                yield db_name, e
+
+    def database_names(self):
+        return self.keys()
 
 
 class YesNoQuestions(TextCorpusReader):
@@ -118,3 +155,33 @@ class MetalLyrics(TextCorpusReader):
         else:
             for f in self.corpora:
                 yield f, self.corpora[f].split("\n\n")
+
+
+class TrveKvlt(JsonDbCorpusReader):
+    def __init__(self):
+        super().__init__("trveKvlt")
+
+    def entries(self, entry_id=None):
+        for db_name, entries in self.corpora.items():
+            for e in entries:
+                eid = e.get("identifier")
+                if not eid:
+                    continue
+                if entry_id:
+                    if eid == entry_id:
+                        yield db_name, e
+                else:
+                    yield eid, e
+
+    def title(self, entry_id=None):
+        for db_name, e in self.entries(entry_id):
+            yield db_name, e["title"]
+
+    def descriptions(self, entry_id=None):
+        for db_name, e in self.entries(entry_id):
+            yield db_name, e["description"]
+
+    def tags(self, entry_id=None):
+        for db_name, e in self.entries(entry_id):
+            yield db_name, e["tags"] or []
+
