@@ -40,7 +40,7 @@ def download(corpus_id, force=False):
         url = CORPUS2URL[corpus_id]
     else:
         raise ValueError("invalid corpus_id")
-    path = join(XDG.save_data_path("JarbasModelZoo"), corpus_id + ".pkl")
+    path = join(XDG.save_data_path("JarbasBiblioteca"), corpus_id + ".tar.gz")
     if isfile(path) and not force:
         LOG.info("Already downloaded " + corpus_id)
         return
@@ -49,6 +49,8 @@ def download(corpus_id, force=False):
     LOG.info("this might take a while...")
     with open(path, "wb") as f:
         f.write(requests.get(url).content)
+    # TODO extract .tar.gz to folder
+    base_folder = join(XDG.save_data_path("JarbasBiblioteca"), corpus_id)
 
 
 def load_corpus(corpus_id):
