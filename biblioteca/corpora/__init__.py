@@ -159,7 +159,7 @@ class MetalLyrics(TextCorpusReader):
 
 class TrveKvlt(JsonDbCorpusReader):
     def __init__(self):
-        super().__init__("trveKvlt")
+        super().__init__("ytcat_trveKvlt")
 
     def entries(self, entry_id=None):
         for db_name, entries in self.corpora.items():

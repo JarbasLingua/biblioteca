@@ -31,7 +31,7 @@ CORPUS2CLASS = {
     "metal_songs": MetalSongs,
     "metal_bands": MetalBands,
     "metal_lyrics": MetalLyrics,
-    "trveKvlt": TrveKvlt
+    "ytcat_trveKvlt": TrveKvlt
 }
 
 _load_meta()
@@ -88,7 +88,7 @@ def load_corpus(corpus_id):
     LOG.debug("loading: " + base_folder)
 
     if fmt == "text":
-        return TextCorpusReader(c)
+        return TextCorpusReader(corpus_id)
     elif fmt == "json":
-        return JsonCorpusReader(c)
-    return AbstractCorpusReader(c)
+        return JsonCorpusReader(corpus_id)
+    return AbstractCorpusReader(corpus_id)

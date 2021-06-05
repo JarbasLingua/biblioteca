@@ -2,6 +2,7 @@ import biblioteca
 
 biblioteca.download('metal_lyrics')
 
+"""
 corpus = biblioteca.load_corpus("metal_lyrics")
 print(corpus.corpus_id)  # metal_lyrics
 print(corpus.folder)  # ~/.local/share/JarbasBiblioteca/metal_lyrics
@@ -12,3 +13,12 @@ for filename, lines in corpus.paragraphs(file_id="heavy_metal_lyrics.txt"):
     # I'll turn your day to night
     # The dark within will tear asunder
     # I've got your soul it's mine
+"""
+
+corpus = biblioteca.load_corpus("ytcat_trveKvlt")
+print(corpus.corpus_id)  # metal_lyrics
+print(corpus.folder)  # ~/.local/share/JarbasBiblioteca/metal_lyrics
+print(corpus.database_names())
+for db_name, entry in corpus.tags():
+    print(db_name, entry)
+
