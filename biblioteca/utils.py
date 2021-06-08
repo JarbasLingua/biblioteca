@@ -1,4 +1,3 @@
-import json
 import logging
 import tarfile
 from os.path import isfile, dirname, isdir
@@ -31,7 +30,9 @@ CORPUS2CLASS = {
     "metal_songs": MetalSongs,
     "metal_bands": MetalBands,
     "metal_lyrics": MetalLyrics,
-    "ytcat_trveKvlt": TrveKvlt
+    "ytcat_trveKvlt": TrveKvlt,
+    "cess_esp_universal": CessEspUniversal,
+    "cess_cat_universal": CessCatUniversal,
 }
 
 _load_meta()

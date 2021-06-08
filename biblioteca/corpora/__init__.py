@@ -1,6 +1,7 @@
+import json
 from os import listdir
 from os.path import join
-import json
+
 from quebra_frases import word_tokenize, sentence_tokenize, paragraph_tokenize
 from xdg import BaseDirectory as XDG
 
@@ -87,6 +88,7 @@ class JsonCorpusReader(AbstractCorpusReader):
 
 class JsonDbCorpusReader(JsonCorpusReader):
     """ json_database https://github.com/HelloChatterbox/json_database """
+
     def load(self):
         for f in self.get_file_names():
             if not f.endswith(".jsondb"):
@@ -185,3 +187,54 @@ class TrveKvlt(JsonDbCorpusReader):
         for db_name, e in self.entries(entry_id):
             yield db_name, e["tags"] or []
 
+
+class CessUniversal(TextCorpusReader):
+    def load(self):
+        self.corpora = []
+        for f in self.get_file_names():
+            if not f.endswith(".txt"):
+                continue
+            with open(join(self.folder, f), errors='surrogateescape') as fi:
+                lines = fi.read().split("\n\n")
+                for l in lines:
+                    if not l:
+                        continue
+                    tagged_words = [tuple(w.split("\t"))
+                                    for w in l.split("\n")]
+                    self.corpora += [tagged_words]
+
+    def lines(self, *args, **kwargs):
+        for f in self.corpora:
+            yield f
+
+    def words(self, *args, **kwargs):
+        for l in self.lines():
+            for w in l:
+                yield w[0]
+
+    def sentences(self, *args, **kwargs):
+        for l in self.lines():
+            yield " ".join([w[0] for w in l])
+
+    def paragraphs(self, *args, **kwargs):
+        for l in self.sentences():
+            yield l
+
+    def tagged_words(self):
+        for l in self.lines():
+            for w in l:
+                yield w
+
+    def tagged_sentences(self):
+        for l in self.lines():
+            yield l
+
+
+class CessCatUniversal(CessUniversal):
+    def __init__(self):
+        super().__init__("cess_cat_universal")
+
+
+class CessEspUniversal(CessUniversal):
+    def __init__(self):
+        super().__init__("cess_esp_universal")
