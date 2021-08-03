@@ -1,5 +1,6 @@
-from biblioteca.corpora.base import TextCorpusReader
 from os.path import join
+
+from biblioteca.corpora.base import TextCorpusReader
 
 
 class YesNoQuestions(TextCorpusReader):
@@ -103,3 +104,5 @@ class CessCatUniversal(CessBase):
 class CessEspUniversal(CessBase):
     def __init__(self):
         super().__init__("cess_esp_universal")
+
+

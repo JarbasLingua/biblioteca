@@ -3,5 +3,6 @@
   "version": "0.1",
   "lang": "en",
   "license": "CC0",
-  "format": "text"
+  "format": "text",
+  "download_url": "https://github.com/OpenJarbas/biblioteca/raw/master/corpora/ytcat_dust.tar.gz"
 }

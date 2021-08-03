@@ -1,7 +1,9 @@
 {
   "corpus_id": "ytcat_trveKvlt",
   "version": "0.1",
+  "total_entries": 6544,
   "lang": "multiple",
   "license": "CC0",
-  "format": "text"
+  "format": "text",
+  "download_url": "https://github.com/OpenJarbas/biblioteca/releases/download/0.0.1a2/ytcat_trveKvlt.tar.gz"
 }

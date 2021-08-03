@@ -106,3 +106,32 @@ class JsonDbCorpusReader(JsonCorpusReader):
 
     def database_names(self):
         return self.keys()
+
+
+class PhonemeDictCorpusReader(AbstractCorpusReader):
+    def load(self):
+        for f in self.get_file_names():
+            if not f.endswith(".dict"):
+                continue
+            with open(join(self.folder, f), errors='surrogateescape') as fi:
+                phone_dict = {}
+                for l in fi.read().split("\n"):
+                    k = l.split()[0]
+                    phone_dict[k] = l.split()[1:]
+                self.corpora[f] = phone_dict
+
+    def words(self, file_id=None):
+        if file_id:
+            yield file_id, self.corpora[file_id]
+        else:
+            for f in self.corpora:
+                yield f, self.corpora[f]
+
+    def lines(self, file_id=None):
+        return self.words(file_id)
+
+    def sentences(self, file_id=None):
+        return self.words(file_id)
+
+    def paragraphs(self, file_id=None):
+        return self.words(file_id)
