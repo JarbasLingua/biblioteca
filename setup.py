@@ -7,6 +7,7 @@ setup(
     url='',
     license='',
     author='jarbasai',
+    install_requires=["pyxdg", "requests", "quebra_frases"],
     author_email='',
     description=''
 )
