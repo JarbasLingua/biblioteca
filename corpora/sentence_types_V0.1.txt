@@ -1,0 +1,465 @@
+label,sentence
+question,Do you like Paris?,
+question,Can you speak Russian?
+question,Will you marry me?
+question,What did you have for breakfast?
+question,Which newspaper do you read?
+question,Who is your favourite actor?
+question,who made you
+question,when will the world end
+question,how fast can an elephant run
+question,why are fire trucks red
+social,Have a nice day.
+social,Get well soon.
+social,Help yourselves to coffee.
+statement,Jimmy loves his dog,
+statement,The government will make an announcement at noon,
+statement,She reads two newspapers every day
+statement,I like Mycroft
+exclamation,What a nice person you are!
+exclamation,What a beautiful painting!,
+exclamation,How clever you are!,
+exclamation,How wonderful that is!
+command,Eat your dinner
+command,Be quiet
+command,Open the pod bay doors
+command,Do your homework
+request,Would you feed the dog, please.
+request,Would you mind shutting the door.
+request,Could I have that now, thank you.
+request,Could you pass me the salt please?
+question,What is your favorite food?
+question,How tall is the Eiffel Tower?
+question,Where did you go on vacation last year?
+question,Who won the last World Cup?
+social,Thank you for your help.
+social,It was great meeting you!
+statement,The Earth revolves around the sun.
+statement,The movie was very suspenseful.
+statement,She is an excellent cook.
+exclamation,Wow, what an incredible performance!
+exclamation,How amazing that sunset is!
+exclamation,This is the best day ever!
+command,Please close the window.
+command,Turn off the lights when you leave.
+command,Do not touch that button.
+request,Can I have a glass of water, please?
+request,Would you be able to lend me a hand with this?
+question,What's your favorite color?
+question,How long have you been studying French?
+question,What time does the movie start?
+question,Can you recommend a good restaurant in the area?
+question,Why do you think it's important to exercise?
+question,Who is your favorite author?
+question,Where were you born?
+social,Congratulations on your new job!
+social,Thank you for your help.
+social,Happy holidays!
+statement,The earth is round.
+statement,I don't like spicy food.
+statement,Travel broadens the mind.
+statement,Reading is my favorite hobby.
+exclamation,What a great performance!
+exclamation,How amazing is that sunset!
+exclamation,What a delicious meal!
+exclamation,How incredible is this view!
+command,Turn off the lights.
+command,Put your phone away.
+command,Stay here.
+request,Can you please lend me your pen?
+request,Would it be possible to borrow your car?
+request,Can you help me move this table?
+request,May I have a glass of water?
+question,How long does it take to fly from London to New York?
+question,What is the capital of Australia?
+question,Where can I find a good sushi restaurant in this area?
+question,Who wrote the book "The Great Gatsby"?
+question,What is the highest mountain in the world?
+social,Good morning
+social,Thank you for your help.
+social,It was nice meeting you.
+statement,The Earth is round.
+statement,I believe that exercise is important for a healthy lifestyle.
+statement,In my opinion, this restaurant has the best pizza in town.
+exclamation,Wow, what an amazing performance!
+exclamation,How incredible that sunset looks!
+exclamation,That's fantastic news!
+command,Please turn off the lights.
+command,Hand me the screwdriver, please.
+request,Can you please lend me your pen?
+request,Would you mind letting me borrow your phone charger?
+request,Can you tell me where the nearest gas station is?
+request,Can I have a glass of water, please?
+forbidden_command,Don't touch the stove, it's hot.
+forbidden_command,You are not allowed to go outside
+forbidden_command,It is forbidden to run inside the house
+forbidden_command,Don't touch that!
+question,How many continents are there in the world?
+question,What is the distance between New York and Los Angeles?
+question,What's the weather like today?
+social,Have a great weekend!
+social,Take care of yourself.
+statement,The internet has revolutionized the way we communicate.
+statement,Music has a profound impact on human emotions.
+exclamation,That's incredible news!
+exclamation,How beautiful that flower is!
+command,Drive safely.
+command,Don't forget to lock the door.
+request,Would you be so kind as to lend me your pen?
+request,Could you please pass me the remote?
+forbidden_command,Don't eat that, it's spoiled.
+forbidden_command,Don't walk on the grass.
+question,What's your favorite song?
+question,How many languages do you speak?
+question,What is the population of Tokyo?
+question,What's the weather like today?
+question,How old are you?
+social,Congratulations on your graduation!
+social,Happy birthday!
+social,Have a safe trip!
+statement,The economy is improving.
+statement,I prefer tea over coffee.
+statement,Playing sports is good for your health.
+exclamation,What a beautiful day!
+exclamation,How awesome is that!
+exclamation,This is incredible news!
+command,Take out the trash.
+command,Don't be late for the meeting.
+command,Be careful with that vase.
+request,Can you please pass me the menu?
+request,Would you mind giving me a ride to the airport?
+request,Can you recommend a good book to read?
+forbidden_command,Don't smoke in this area.
+forbidden_command,Don't use your phone while driving.
+forbidden_command,Do not enter this area without permission.
+forbidden_command,It is prohibited to litter.
+question,How many countries are in Africa?
+question,What is the best way to learn a new language?
+question,What is the name of the longest river in South America?
+social,Congratulations on your graduation!
+social,Happy birthday!
+social,Hope to see you again soon.
+statement,The internet has changed the way we communicate.
+statement,I prefer tea over coffee.
+statement,Traveling alone can be a great experience.
+exclamation,How beautiful this flower is!
+exclamation,What a stunning performance!
+exclamation,This is unbelievable!
+command,Take out the trash.
+command,Don't forget to lock the door.
+command,Stay safe.
+request,Can you please send me the document?
+request,May I borrow your umbrella?
+request,Can you recommend a good book to read?
+forbidden_command,Do not enter this area.
+forbidden_command,Stop running right now.
+forbidden_command,Don't touch the exhibit.
+question,What is the capital of Brazil?
+question,How many continents are there?
+question,Who was the first person to walk on the moon?
+social,Good luck with your interview!
+social,Cheers to a great night!
+social,Happy birthday!
+statement,The company's profits have been steadily increasing.
+statement,The beach is my happy place.
+statement,I think that music is a universal language.
+exclamation,How incredible is this artwork!
+exclamation,What a stunning view!
+exclamation,This is the best news ever!
+command,Take out the trash.
+command,Don't forget to set your alarm.
+command,Stay focused on your goals.
+request,Can you lend me a hand with this heavy box?
+request,Would you be able to pick up some milk from the store?
+request,Can you please pass me the remote?
+forbidden_command,Do not enter this area.
+forbidden_command,Don't speak to strangers.
+forbidden_command,It is prohibited to smoke in this building.
+forbidden_command,Stay away from the edge.
+question,What is your favorite type of music?
+question,What is the highest recorded temperature on Earth?
+question,How many people live in New York City?
+social,Happy New Year!
+social,Thank you for your time.
+statement,The United States is the third-largest country in the world by area.
+statement,The Mona Lisa was painted by Leonardo da Vinci.
+statement,Exercise can improve your mood and reduce stress.
+exclamation,How stunning is that view!
+exclamation,That's amazing!
+exclamation,How beautiful is this flower!
+command,Don't forget to take your medication.
+command,Take a deep breath and relax.
+request,Can you please send me that file?
+request,Would you mind passing me the salt?
+forbidden_command,Do not drink and drive.
+forbidden_command,Do not enter without permission.
+question,What is the largest mammal in the world?
+question,How many elements are on the periodic table?
+question,What is the name of the largest desert in the world?
+social,Happy Thanksgiving!
+social,Congratulations on your promotion!
+statement,Water boils at 100 degrees Celsius.
+statement,The Great Barrier Reef is the world's largest coral reef system.
+statement,Reading can improve your vocabulary and critical thinking skills.
+exclamation,What a wonderful surprise!
+exclamation,How gorgeous is that dress!
+exclamation,That's fantastic!
+command,Please turn off your cell phone.
+command,Pay attention to the road while driving.
+request,Can you please make me a cup of tea?
+request,Would you be able to lend me a hand with this project?
+forbidden_command,Do not smoke in this area.
+forbidden_command,Do not touch the art.
+question,What is the highest grossing movie of all time?
+question,Who was the first woman to win a Nobel Prize?
+question,What is the largest mammal in the world?
+question,Who was the first person to step on the moon?
+question,What is the largest planet in our solar system?
+social,Happy Valentine's Day!
+social,Enjoy your weekend!
+statement,The Great Barrier Reef is the largest coral reef system in the world.
+statement,The human body is made up of approximately 60% water.
+exclamation,What a beautiful view!
+exclamation,How stunning is that sunset!
+command,Please make sure to lock the door when you leave.
+command,Don't forget to turn off the oven when you're done.
+request,Can you please pass me the salt?
+request,Would you be able to give me a ride to the airport?
+forbidden_command,Don't touch the art.
+forbidden_command,Do not enter without permission.
+question,What is the most widely spoken language in the world?
+question,What is the highest point in North America?
+question,Who invented the telephone?
+social,Happy Mother's Day!
+social,Good luck on your exam!
+statement,The Amazon Rainforest is the largest rainforest in the world.
+statement,The Mona Lisa is a painting by Leonardo da Vinci.
+exclamation,That's incredible!
+exclamation,How wonderful is that!
+command,Please turn down the volume.
+command,Don't touch the hot stove.
+request,Can you please lend me a hand?
+request,Would you mind passing me a napkin?
+forbidden_command,Don't drink and drive.
+forbidden_command,Do not trespass.
+question,What is your favorite sport?
+question,What is the tallest animal in the world?
+question,What is the boiling point of water?
+social,Good luck on your exam!
+social,Have a great day at work!
+statement,The Mona Lisa is a famous painting by Leonardo da Vinci.
+statement,The Great Barrier Reef is the largest coral reef system in the world.
+statement,The human body is made up of approximately 60% water.
+exclamation,What a stunning view!
+exclamation,How fascinating!
+exclamation,This is unbelievable!
+command,Please take a seat.
+command,Wait for me outside.
+command,Leave the room immediately.
+request,Can you please help me carry these boxes?
+request,Would you mind passing me a tissue?
+forbidden_command,Do not touch the electric fence.
+forbidden_command,Do not open the emergency exit.
+question,What is the largest planet in our solar system?
+question,What is the capital of France?
+question,What is the meaning of life?
+social,Happy anniversary!
+social,Thank you for coming to my party!
+statement,The Amazon Rainforest is the largest rainforest in the world.
+statement,Cooking at home is often healthier than eating out at a restaurant.
+statement,The Declaration of Independence was signed on July 4, 1776.
+exclamation,What a gorgeous dress!
+exclamation,How incredible is that achievement!
+exclamation,This is amazing news!
+command,Take a deep breath.
+command,Don't forget your keys.
+request,Can you please lend me your book?
+request,Would it be possible to get a glass of water?
+forbidden_command,Do not smoke in the building.
+forbidden_command,Do not enter this area without permission.
+question,What is the largest ocean in the world?
+question,What is the fastest land animal?
+question,What is the most common element in the Earth's atmosphere?
+social,Happy Valentine's Day!
+social,Thank you for your kind words.
+statement,The Statue of Liberty was a gift from France to the United States.
+statement,The sun is a star that is located at the center of our solar system.
+statement,Exercise can improve both physical and mental health.
+exclamation,What an amazing experience!
+exclamation,How beautiful is that artwork!
+exclamation,This is fantastic!
+command,Please take off your shoes.
+command,Put your phone on silent.
+request,Can you please call me a taxi?
+request,Would you be able to lend me a hand with this project?
+forbidden_command,Do not touch the paintings.
+forbidden_command,Do not feed the animals at the zoo.
+question,What is the smallest country in the world?
+question,What is the currency used in Japan?
+question,What is the highest waterfall in the world?
+social,Happy Thanksgiving!
+social,Congratulations on your new baby!
+statement,The Titanic was a British passenger ship that famously sank in 1912.
+statement,The human brain weighs approximately three pounds.
+statement,The first iPhone was released in 2007.
+exclamation,How stunning is that sunset!
+exclamation,What an impressive accomplishment!
+exclamation,This is phenomenal news!
+command,Please turn down the music.
+command,Do not touch the artwork.
+request,Can you please pass me the salt and pepper?
+request,Would it be possible to schedule a meeting for next week?
+forbidden_command,Do not touch the thermostat.
+forbidden_command,Do not use the elevator during a fire.
+social,Have a great day!
+social,Take care of yourself.
+statement,Reading is an important part of learning.
+statement,The sun rises in the east and sets in the west.
+exclamation,What a beautiful painting!
+exclamation,How wonderful that is!
+command,Please close the window.
+command,Put your phone away.
+request,Would you mind shutting the door?
+request,Could I have that now, please?
+forbidden_command,Don't leave the stove on.
+forbidden_command,Do not use the elevator during a fire.
+forbidden_command,Don't touch that!
+forbidden_command,Don't touch that! It's hot!
+request,Would you mind helping me with this task?
+question,What is the difference between a crocodile and an alligator?
+question,What is the meaning of life?
+question,How do you make a perfect cup of coffee?
+question,What is the largest desert in the world?
+social,Thank you for your kind words.
+social,Have a great day ahead!
+social,Stay safe and take care.
+statement,The world is facing a climate crisis.
+statement,Education is the key to success.
+statement,Laughter is the best medicine.
+exclamation,How stunning is this view!
+exclamation,That's an amazing idea!
+exclamation,How delicious does this food smell!
+command,Please turn off your cell phone during the movie.
+command,Don't forget to bring your passport to the airport.
+command,Please keep the noise level down in the library.
+request,Can you please lend me some money until payday?
+request,Would you mind passing me the salt, please?
+request,Can you tell me how to get to the nearest hospital?
+forbidden_command,Do not enter this area without permission.
+forbidden_command,Do not touch the exhibits in the museum.
+forbidden_command,Do not feed the wild animals.
+question,What is the best way to learn a new language?
+question,What is the difference between a virus and a bacteria?
+question,What is the most common language spoken in the world?
+social,Happy anniversary!
+social,Thank you for being there for me.
+social,Welcome to the team!
+statement,Hard work pays off in the end.
+statement,Money cannot buy happiness.
+statement,The early bird catches the worm.
+exclamation,How exciting is this news!
+exclamation,That's a great accomplishment!
+exclamation,How beautiful is this artwork!
+command,Please clean up after yourself.
+command,Don't forget to lock the door when you leave.
+command,Please do not smoke in the building.
+request,Can you please send me the document via email?
+request,Would you mind holding the door for me?
+request,Can you recommend a good book to read?
+forbidden_command,Do not use your cell phone while driving.
+forbidden_command,Do not leave your luggage unattended.
+forbidden_command,Do not use fireworks without proper safety measures.
+question,What are the most popular sports in your country?
+question,How do you say "hello" in Mandarin?
+question,What are some good books to read for beginners in your language?
+question,What is the history of your hometown?
+social,Thank you for inviting me!
+social,Let's grab coffee sometime!
+social,It was great seeing you again.
+statement,The environment is suffering from pollution and climate change.
+statement,Reading books is a great way to expand your knowledge.
+statement,People should be treated equally regardless of their race gender or sexuality.
+exclamation,What an incredible view from up here!
+exclamation,How amazing is this dish!
+exclamation,This is the best news I've heard all day!
+command,Please be quiet in the library.
+command,Don't forget to turn off the stove before you leave.
+command,Be sure to wear sunscreen when you're outside.
+request,Would you be able to proofread my essay?
+request,Could you please show me how to use this software?
+request,Can you help me find my lost keys?
+forbidden_command,Don't touch that, it's fragile.
+forbidden_command,You are not allowed to smoke in this area.
+forbidden_command,Do not enter this area, it's dangerous.
+question,What are some common traditions in your culture?
+question,What is your favorite hobby?
+question,What are the best places to visit in your city?
+social,Happy anniversary!
+social,It was nice to meet your family.
+social,Let's plan a trip together.
+statement,Education is important for personal and societal growth.
+statement,We should all strive to be more environmentally conscious in our daily lives.
+statement,The arts are an important aspect of human culture.
+exclamation,Wow, what an amazing performance!
+exclamation,How beautiful is this artwork!
+exclamation,This is the happiest I've felt in a long time!
+command,Please put your phone on silent during the movie.
+command,Don't forget to bring your ID to the airport.
+command,Stay safe and stay hydrated in the heat.
+request,Can you please explain this concept to me again?
+request,Would you mind giving me a ride to the train station?
+request,Can you recommend a good place to buy shoes?
+forbidden_command,Do not use your phone while driving.
+forbidden_command,Do not drink and drive.
+forbidden_command,Don't touch the exhibits in the museum.
+statement,Reading books before bed helps me fall asleep.
+statement,I have been learning to play the guitar for a year now.
+statement,I think learning a new language is very rewarding.
+exclamation,What an impressive performance by the dancers!
+exclamation,How breathtaking is the view from here!
+exclamation,This is a dream come true!
+command,Take a break and stretch your legs.
+command,Don't forget to set your alarm for tomorrow morning.
+command,Be sure to wear sunscreen on a sunny day.
+request,Can you please show me how to use this software?
+request,Would it be possible to borrow your umbrella?
+request,Can you recommend a good book to read?
+question,What's your favorite hobby?
+question,What do you usually eat for lunch?
+question,What's your opinion on climate change?
+social,Hope to see you again soon!
+social,Cheers to a great evening!
+social,Thank you for inviting me over!
+forbidden_command,Do not enter the construction zone.
+forbidden_command,Don't touch the fragile objects on the shelf.
+forbidden_command,It is not permitted to take pictures in this museum.
+question,What is the meaning of life?
+question,What are your plans for the weekend?
+question,What is the best way to learn a new skill?
+statement,The sky is so blue today.
+statement,Watching movies is my favorite pastime.
+statement,I believe in treating others with kindness.
+exclamation,What a stunning sunset!
+exclamation,How incredible is this experience!
+exclamation,That's amazing news!
+command,Don't forget to turn off the stove before leaving.
+command,Please take your shoes off before entering the house.
+command,Be sure to double-check your work before submitting.
+request,Can you please give me a ride to the train station?
+request,Would you mind sharing your notes with me?
+request,Can you recommend a good place to get a haircut?
+social,Have a wonderful day!
+social,Take care and stay safe!
+social,Thank you for your kindness and generosity.
+forbidden_command,Do not touch the art pieces in the gallery.
+forbidden_command,Do not exceed the speed limit on this road.
+forbidden_command,Smoking is strictly prohibited in this area.
+question,What is the best way to stay motivated?
+question,What are your favorite hobbies?
+question,What's your favorite season?
+statement,I believe in the power of positive thinking.
+statement,Having a positive attitude can make a big difference in your life.
+question,What are some good places to visit in Japan?
+question,How do I improve my public speaking skills?
+question,What is the best way to learn a new language?
+question,How can I become more productive at work?
